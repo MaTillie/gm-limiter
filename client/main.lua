@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local actif = false
 local vitesse = 50
--- gm-limiter:client:limitateur
+
 AddEventHandler('gm-limiter:client:resetlimitateur', function()
     limitateur(0)
 end)
@@ -71,9 +71,11 @@ Citizen.CreateThread(function()
                         SetEntityMaxSpeed(vehicle, cruise)
                     end
                   end
-
-
+            else
+                actif = false
+                vitesse = 50
             end
+
 
         end
     
