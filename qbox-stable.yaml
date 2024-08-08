@@ -32,7 +32,6 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbox/qbox.sql
-
   - action: waste_time # modifie sql
     seconds: 120
 
